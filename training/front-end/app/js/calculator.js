@@ -5,10 +5,12 @@
     console.log('input the number for operate');
 var suma = 0;
 
+// this is the funtion class
 var Calculator;
 Calculator = function () {
 
 };
+// this is the funtion that calculate
 Calculator.prototype.eval = function()
 {
 
@@ -21,7 +23,7 @@ Calculator.prototype.eval = function()
     console.log('this is the avg of the parameters')
     this.avg(arguments);
 };
-// this funtion recive the parametr if parameter is more of 1 working that arguments of this funtion
+// this funtion recive the parametr if parameter is object  of 1 working that arguments of this funtion
 Calculator.prototype.sum = function(arg)
 {
     if(typeof arguments[0] == "object" )
@@ -30,6 +32,7 @@ Calculator.prototype.sum = function(arg)
         console.log( this.addsum(arguments , 0))
 };
 
+// this function recive the parameter if parameter is a object working with arguments recived
 Calculator.prototype.max = function(arg)
 {
     if(typeof arguments[0] == "object" )
@@ -38,7 +41,7 @@ Calculator.prototype.max = function(arg)
         console.log( this.calcmax(arguments,0 , 0) );
 
 };
-
+// this function recive the parameter if parameter is a object working with arguments recived
 Calculator.prototype.min = function(arg)
 {
     if(typeof arguments[0] == "object" ){
@@ -48,7 +51,7 @@ Calculator.prototype.min = function(arg)
     }
 };
 
-
+//this function recive the parameter if parameter is a object working with arguments recived
 Calculator.prototype.avg = function(arg)
 {
     if(typeof arguments[0] == "object" ){
@@ -70,7 +73,7 @@ Calculator.prototype.addsum = function(ar , pos){
 };
 
 
-// get max
+// get max of the paramaters (arguments)
 Calculator.prototype.calcmax = function(arg , pos , max){
     var res = max;
     if(arg.length > pos) {
@@ -82,7 +85,7 @@ Calculator.prototype.calcmax = function(arg , pos , max){
     }
     return res ;
 };
-
+// get min of the parameters (arguments)
 Calculator.prototype.calcmin = function(arg , pos , min){
     var res = min;
     if(arg.length > pos) {
@@ -94,7 +97,7 @@ Calculator.prototype.calcmin = function(arg , pos , min){
     }
     return res ;
 };
-
+// get average of the parametrs (arguments)
 Calculator.prototype.calcavg = function(arg)
 {
     var num = this.addsum(arg , 0);
@@ -108,13 +111,12 @@ Calculator.prototype.calcavg = function(arg)
 
 
 
-
 var countWord = function(word){
     var res = word.split(' ');
     return res.length;
 };
 
-console.log('the paragraf hassdf' , countWord('hello word') , 'words' );
+console.log('the paragraf has' , countWord('hello word') , 'words' );
 
 
 
