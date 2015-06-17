@@ -114,7 +114,7 @@ var countWord = function(word){
     return res.length;
 };
 
-console.log('the paragraf has' , countWord('hello word') , 'words' );
+console.log('the paragraf hassdf' , countWord('hello word') , 'words' );
 
 
 
