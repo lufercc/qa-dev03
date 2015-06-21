@@ -5,7 +5,7 @@
 var initRange = 20;
 var endRage = 50;
 
-console.log('first capicua betwen' , initRange , 'and' , endRage , 'is' , getFirstCApicua(initRange , endRage));
+var quantyN = 10;
 
 /**
  * recive two number and return a first number capicua
@@ -15,16 +15,17 @@ console.log('first capicua betwen' , initRange , 'and' , endRage , 'is' , getFir
  */
 var getFirstCapicua = function(initRange , endRage )
 {
-    var res
+    var res;
     for(var i = initRange; i< endRage ; i++)
     {
         if(iscapicua(i))
         {
             res = i;
+            return res;
         }
     }
-    return res;
-}
+
+};
 /**
  * return true if the number is capicua
  * or false is the number no is capicua
@@ -32,9 +33,53 @@ var getFirstCapicua = function(initRange , endRage )
  */
 var iscapicua = function(num)
 {
-    var numres
-    for(var i = 0 ; i<num.length(); i++ )
+    return num == Number.parseInt(num.toString().split('').reverse().join(''));
+};
+
+
+var isEvenNumber= function (n) {
+    return n%2 == 0;
+};
+/**
+ * esta funccion deve de debover numeros impares
+ * @param qnumbers
+ * @returns {Array}
+ */
+var numerodd = function(qnumbers)
+{
+    var res = [];
+    for(var i= 1 ; i<qnumbers*2 ;i++ )
+
     {
-        numres = num %10;
+        if( isEvenNumber(i))
+        continue;
+
+        res.push(i);
     }
-}
+    return res;
+};
+/**
+ * falta implementar esta funcion deve de devolver numeros pares
+ * @param quantyN
+ */
+var numbereven = function(quantyN){};
+
+var numberFactorial = function(num)
+{
+    var res = 1;
+
+    for(var i=num ; i>0 ; i--)
+    {
+        res *= i;
+    }
+    return res;
+};
+
+/**
+console log q llama a las funciones
+ */
+console.log('the factorial of '+quantyN +' is '+ numberFactorial(quantyN));
+
+console.log('los number odd is ' + numerodd(quantyN) +' the numer even is '+ numbereven(quantyN));
+
+console.log('first capicua betwen' , initRange , 'and' , endRage , 'is' , getFirstCapicua(initRange , endRage));
